@@ -1,0 +1,284 @@
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablet & Below (768px) */
+@media (max-width: 768px) {
+    .app-container {
+        padding: 16px 16px;
+    }
+
+    .app-header {
+        padding: 12px 0 20px;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .logo-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .tagline {
+        font-size: 0.8rem;
+        padding-left: 38px;
+    }
+
+    .input-group {
+        flex-wrap: wrap;
+    }
+
+    .task-input {
+        flex-basis: 100%;
+        padding: 14px 16px;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .task-priority-select {
+        margin-left: 12px;
+    }
+
+    .btn-add {
+        margin: 8px 8px 8px auto;
+    }
+
+    .filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .filter-group {
+        justify-content: center;
+    }
+
+    .action-group {
+        justify-content: center;
+    }
+
+    .task-actions {
+        opacity: 1;
+    }
+
+    .stats-bar {
+        padding: 12px 14px;
+    }
+
+    .stat-number {
+        font-size: 1.2rem;
+    }
+}
+
+/* Mobile (480px) */
+@media (max-width: 480px) {
+    .app-container {
+        padding: 12px 12px;
+    }
+
+    .app-header {
+        padding: 8px 0 16px;
+    }
+
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+
+    .tagline {
+        display: none;
+    }
+
+    .filter-btn {
+        padding: 7px 10px;
+        font-size: 0.75rem;
+    }
+
+    .filter-btn svg {
+        display: none;
+    }
+
+    .btn-action {
+        padding: 7px 10px;
+        font-size: 0.75rem;
+    }
+
+    .btn-action svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .task-item {
+        padding: 12px 14px;
+        gap: 10px;
+    }
+
+    .task-text {
+        font-size: 0.875rem;
+    }
+
+    .task-meta {
+        gap: 8px;
+    }
+
+    .btn-task-action {
+        width: 30px;
+        height: 30px;
+    }
+
+    .btn-task-action svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .btn-add span {
+        display: none;
+    }
+
+    .btn-add {
+        padding: 10px 14px;
+    }
+
+    .toast-container {
+        bottom: 12px;
+        right: 12px;
+        left: 12px;
+    }
+
+    .toast {
+        max-width: 100%;
+    }
+
+    .modal {
+        border-radius: var(--radius-lg);
+    }
+
+    .modal-header {
+        padding: 16px 20px 0;
+    }
+
+    .modal-body {
+        padding: 16px 20px 20px;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+    }
+
+    .modal-actions button {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .stats-bar {
+        gap: 4px;
+        padding: 10px 10px;
+    }
+
+    .stat-number {
+        font-size: 1.1rem;
+    }
+
+    .stat-label {
+        font-size: 0.6rem;
+    }
+
+    .progress-ring-container {
+        width: 38px;
+        height: 38px;
+    }
+
+    .progress-ring {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+/* Small Mobile (360px) */
+@media (max-width: 360px) {
+    .logo h1 {
+        font-size: 1.15rem;
+    }
+
+    .logo-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .btn-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .btn-icon svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .filter-btn {
+        padding: 6px 8px;
+        font-size: 0.7rem;
+    }
+}
+
+/* Large Screen */
+@media (min-width: 1200px) {
+    .app-container {
+        max-width: 760px;
+    }
+}
+
+/* Hover-capable devices only */
+@media (hover: none) {
+    .task-actions {
+        opacity: 1;
+    }
+
+    .btn-add:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .btn-action:hover {
+        transform: none;
+    }
+
+    .btn-primary:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Print */
+@media print {
+    .app-header .header-right,
+    .add-task-section,
+    .filter-bar,
+    .task-actions,
+    .app-footer,
+    .toast-container {
+        display: none !important;
+    }
+
+    .task-item {
+        box-shadow: none;
+        border: 1px solid #ccc;
+        break-inside: avoid;
+    }
+
+    .app-container {
+        max-width: 100%;
+    }
+}
